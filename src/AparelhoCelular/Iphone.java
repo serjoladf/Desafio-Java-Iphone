@@ -1,10 +1,11 @@
 package AparelhoCelular;
 
 import AparelhoCelular.Internet.NavegarNaInternet;
+import AparelhoCelular.MensagemTexto.Mensagem;
 import AparelhoCelular.Musica.ReprodutorMusical;
 import AparelhoCelular.Telefone.AparelhoTelefonico;
 
-public class Iphone implements AparelhoTelefonico, ReprodutorMusical, NavegarNaInternet {
+public class Iphone implements AparelhoTelefonico, ReprodutorMusical, NavegarNaInternet, Mensagem {
     @Override
     public void funcaoFone() {
 
@@ -30,5 +31,12 @@ public class Iphone implements AparelhoTelefonico, ReprodutorMusical, NavegarNaI
         System.out.println("Selecionar Música");
         System.out.println("Pausar Música");
         
+    }
+
+    @Override
+    public void funcaoMensagem() {
+        System.out.println("Apagou a mensagem");
+        System.out.println("Ler mensagem");
+        System.out.println("Escrever mensagem");
     }
 }
